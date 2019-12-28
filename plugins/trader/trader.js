@@ -181,7 +181,7 @@ Trader.prototype.processAdvice = function(advice) {
       });
     }
 
-    amount = this.portfolio.currency / this.price * 0.95;
+    amount = this.portfolio.currency / this.price * 0.99;
 
     log.info(
       'Trader',

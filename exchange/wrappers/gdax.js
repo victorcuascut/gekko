@@ -11,7 +11,8 @@ const QUERY_DELAY = 350;
 const marketData = require('./coinbase-markets.json');
 
 const Trader = function(config) {
-  this.post_only = true;
+  this.post_only = false;
+  this.type = 'market'
   this.use_sandbox = false;
   this.name = 'GDAX';
   this.scanback = false;
@@ -161,6 +162,7 @@ Trader.prototype.buy = function(amount, price, callback) {
     size: this.getMaxDecimalsNumber(amount),
     product_id: this.pair,
     post_only: this.post_only,
+    type: this.type,
   };
 
   const result = (err, data) => {
