@@ -13,6 +13,8 @@ Build a distrubuted backtesting suite which can run on any computer.
     - [ ] Create server to run backtests
     - [ ] Setup alerts on failed backtest via email or Slack
     - [ ] Split backtest and Gekko into different dockers
+    - [ ] Mount strategies, config, and history via docker-compose.yml
+    - [ X ] Load Gekko-Strategies repo
     
 - ### Backtest data
     - [ ] Build standalone databases repo which can store backtest data
