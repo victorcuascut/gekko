@@ -2,7 +2,8 @@ FROM node:8
 
 ENV HOST localhost
 ENV PORT 3000
-
+ENV BACKTESTTOOL_VER=7.0
+ENV BACKTESTTOOL_URL=https://github.com/xFFFFF/Gekko-BacktestTool/releases/download/v${BACKTESTTOOL_VER}/Gekko-BacktestTool-v${BACKTESTTOOL_VER}-Ubuntu-amd64.zip
 # Create app directory
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
@@ -26,6 +27,12 @@ WORKDIR ../
 
 # Bundle app source
 COPY . /usr/src/app
+
+# Setup Backtesttool
+RUN apt-get update
+RUN apt-get install build-essential
+RUN curl -L http://cpanmin.us | perl - App::cpanminus
+RUN cpanm -n install Parallel::ForkManager Time::Elapsed Getopt::Long List::MoreUtils File::chdir Statistics::Basic DBI DBD::SQLite JSON::XS TOML File::Basename File::Find::Wanted Template LWP::UserAgent LWP::Protocol::https Set::CrossProduct DBD::CSV Text::Table File::Copy
 
 EXPOSE 3000
 RUN chmod +x /usr/src/app/docker-entrypoint.sh
