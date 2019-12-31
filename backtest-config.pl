@@ -28,7 +28,7 @@ kraken:EUR:XBT
 #$default_set = 'binance:BNB';
 
 # CSV file name. You don't need change this. All new data will append to exist file without deleting or replacing.
-$csv = 'database.csv';
+$csv = './output/database.csv';
 
 # You can add note to project below. Note will be add in CSV file. Its can be useful when You are developing strategy.
 $note = 'first run';
