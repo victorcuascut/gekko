@@ -12,6 +12,7 @@ Build a distrubuted backtesting suite which can run on any computer.
     - [ ] Cosolidate CSVs for all backtesting automatically
     - [ ] Improve back testing tool to support real market
     - [ ] Create server to run backtests
+        - [ ] Remote control server
     - [ ] Setup alerts on failed backtest via email or Slack
     - [ ] Split backtest and Gekko into different dockers
     - [ ] Mount strategies, config, and history via docker-compose.yml
