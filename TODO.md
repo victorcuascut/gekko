@@ -24,11 +24,13 @@ Build a distrubuted backtesting suite which can run on any computer.
         - [Gekko Datasets](https://github.com/xFFFFF/Gekko-Datasets)
     - [ ] Collect 2 years of backtest data
         - [Store trades in Google SpreadSheet](https://github.com/RJPGriffin/google-forms-gekko-plugin)
+        - wget https://drive.google.com/file/d/18izvqp3...sp=sharing && unzip binance.zip && cp gekko/history
 
 - ### Trading Suite
     - [ X ] Set Gdax to use Market only trades and set post to false
     - [ ] Write live trades to CSV or Google Sheets
     - [ ] Setup trading bot to work via commandline
+    - [ ] Make repo private
 
 #
 ## Additional:
