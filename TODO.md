@@ -11,11 +11,11 @@ Build a distrubuted backtesting suite which can run on any computer.
     - [ X ] Load Gekko-Strategies repo
     - [ ] Cosolidate CSVs for all backtesting automatically
     - [ ] Improve back testing tool to support real market
-    - [ ] Create server to run backtests
-        - [ ] Remote control server
+    - [ X ] Create server to run backtests
+        - [ X ] Remote control server
     - [ ] Setup alerts on failed backtest via email or Slack
     - [ ] Split backtest and Gekko into different dockers
-    - [ ] Mount strategies, config, and history via docker-compose.yml
+    - [ X ] Mount strategies, config, and history via docker-compose.yml
     
     
 - ### Backtest data
@@ -24,8 +24,8 @@ Build a distrubuted backtesting suite which can run on any computer.
         - [ ] Set dataset creator to a cron
         - [Gekko Datasets](https://github.com/xFFFFF/Gekko-Datasets)
     - [ ] Collect 2 years of backtest data
-        - [Store trades in Google SpreadSheet](https://github.com/RJPGriffin/google-forms-gekko-plugin)
-        - wget https://drive.google.com/file/d/18izvqp3...sp=sharing && unzip binance.zip && cp gekko/history
+    - [ X ] Create script to pull Gekko Datasets from Google Drive
+    - [ ] Automate test for month over month testing
 
 - ### Trading Suite
     - [ X ] Set Gdax to use Market only trades and set post to false
