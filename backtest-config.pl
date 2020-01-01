@@ -2,9 +2,62 @@ no warnings qw(uninitialized);
 ############################# START OF CONFIGURATION #############################
 # Put your strategy names between brackets in line below. Strategy seperate with space or newline. You can add all Your strategies from gekko/strategies directory with adding line ALL.
 @strategies = qw(
-MACD
+BBRSI
+BodhiDI_public
 CCI
+CCI_custom
+CUSTOM_RSI
+DEBUG_single-advice
+DEBUG_toggle-advice
+DEMA
+DEMACrossover
+DI
+Dave
+DynBuySell
+EMACrossover
+EMADIV
+EMADIV2
+EMA_OR_PRICE_DIV
+FIXPRICE
+MACD
+MACD_1520024643
+MK_RSI_BULL_BEAR
+NEO
+NN_ADX_RSI
+PPO
 RSI
+RSI_BB_ADX_Peak
+RSI_BULL_BEAR
+RSI_BULL_BEAR_ADX_PINGPONG
+RSI_Bull_Bear_Adx_Stop
+RsiStopLoss
+StochRSI
+Supertrend_Gab0
+TEMA
+TMA
+TSI
+UO
+bestone_updated_hardcoded
+bryanbeck
+buyatsellat_ui
+jazzbre
+mounirs-ga-version-1
+mounirs-ga-version-2
+mounirs_esto
+n8
+n8_v2
+n8_v2_BB_RSI_SL
+neuralnet_v2
+noop
+rsidyn
+scarface_v2
+talib-macd
+tulip-adx
+tulip-macd
+tulip-multi-strat
+varPPO
+w2
+x2_rsi
 );
 # Put your pairs between brackets in line below. Use exchange:currency:asset format. Seperate pair using space or newline. You can add all Your paris with ALL line or all pairs for exchange with binance:ALL line or binance:USDT:ALL line. Another option is adding dates for dataset for indivual pairs, ex: binance:BNB:NULS:2018-04-05:2018-05-01
 @pairs = qw(
