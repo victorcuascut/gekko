@@ -26,6 +26,7 @@ Build a distrubuted backtesting suite which can run on any computer.
     - [ ] Collect 2 years of backtest data
     - [ X ] Create script to pull Gekko Datasets from Google Drive
     - [ ] Automate test for month over month testing
+    - [ X ] Fix strategies' dependencies.
 
 - ### Trading Suite
     - [ X ] Set Gdax to use Market only trades and set post to false

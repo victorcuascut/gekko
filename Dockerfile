@@ -33,6 +33,8 @@ RUN apt-get update
 RUN apt-get install build-essential
 RUN curl -L http://cpanmin.us | perl - App::cpanminus
 RUN cpanm -n install Parallel::ForkManager Time::Elapsed Getopt::Long List::MoreUtils File::chdir Statistics::Basic DBI DBD::SQLite JSON::XS TOML File::Basename File::Find::Wanted Template LWP::UserAgent LWP::Protocol::https Set::CrossProduct DBD::CSV Text::Table File::Copy
+RUN npm install mathjs convnetjs talib-stream zero-fill joi numbro
+RUN npm install tulind --no-save
 
 EXPOSE 3000
 RUN chmod +x /usr/src/app/docker-entrypoint.sh
