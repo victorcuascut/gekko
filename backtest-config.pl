@@ -187,7 +187,7 @@ config.neuralnet_BULL_BEAR = {
 
 # Other Gekko's settings for backtest
 $asset_c = 1;
-$currency_c = 100;
+$currency_c = 1000;
 $fee_maker = 0.25;
 $fee_taker = 0.25;
 $fee_using = 'maker';
