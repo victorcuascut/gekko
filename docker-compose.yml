@@ -4,6 +4,7 @@ services:
     build: ./
     volumes:
       - ./history:/usr/src/app/history
+      - ./strategies:/app/strategies
       - ./output:/usr/src/app/output
       - ./config.js:/usr/src/app/config.js
     links:
