@@ -456,7 +456,7 @@ if ($oimport) {
     }
     @match = uniq @match;
     {
-    local $CWD = 'util/genMarketFiles';
+    local $CWD = 'exchange/util/genMarketFiles';
     foreach (@match) {
     print "Updating Gekko's $_ market data...\n";
     system("node update-$_.js");
@@ -466,7 +466,7 @@ if ($oimport) {
       my @sets = split /:/, $_;
       #SPRAWDZIC!!!!!!!!!!!!!!
       if ($sets[1] eq 'ALL' || $sets[2] eq 'ALL') {
-        my $filename = "exchanges/$sets[0]-markets.json";
+        my $filename = "exchange/wrappers/$sets[0]-markets.json";
         my $json_text = do {
           open(my $json_fh, "<:encoding(UTF-8)", $filename) or die("Can't open \$filename\": $!\n");
           local $/;
@@ -741,6 +741,7 @@ else {
   if ($cmc_data eq 'yes') {
     print "[".strftime ("%Y-%m-%d %H:%M:%S", localtime)."] Collect data from coinmarketcap.com\n" if $stfu eq 'no';
     $req = LWP::UserAgent->new;
+    $req->env_proxy;
     $req->agent("Gekko BacktestTool");
     $req->timeout(10);
     my $response = $req->get("https://api.coinmarketcap.com/v1/ticker/?limit=800");
@@ -1277,8 +1278,7 @@ Total: ".scalar @warmup."
           print $fh2 join ("\n",$grun);
           close $fh2;
         }
-        # my @profit = $grun =~ /(?<=simulated profit:\t\t )[0-9.\-][0-9.\-]* $sets[1] \((.*)(?=\%\))/;
-        my @profit = $grun =~ /(?<=profit:\t\t )[0-9.\-][0-9.\-]* $sets[1] \((.*)(?=\%\))/;
+        my @profit = $grun =~ /(?<=profit:\t\t\t\t )[0-9.\-][0-9.\-]* $sets[1] \((.*)(?=\%\))/;
         my @yearly = $grun =~ /(?<=simulated yearly profit:\t )[0-9.\-][0-9.\-]* $sets[1] \((.*)(?=\%\))/;
         my @trades = $grun =~ /(?<=trades:\t\t )(.*?)(?=\n)/;
         my @period = $grun =~ /(?<=timespan:\t\t\t )(.*?)(?=\n)/;
